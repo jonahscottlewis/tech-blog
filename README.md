@@ -2,15 +2,39 @@
 
 # Teable of Contents
 
+* [User Story](#user-story)
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [GitHub](#github-url)
+* [Contact](#contact)
+
 # User Story
+
+As A user
+I WANT to have a place to write posts about and discuss coding and tech
+SO THAT I can share information with other developers as well as interact with them in blog comments
 
 # Description
 
 ![Tech Blog Screenshot]()
 
-# Technologies Used
+# Installation
 
-# GitHub Link
+MySQL2, Sequelize, dotenv package, express-session, express-handlebars and connect-session sequalize
+
+# Usage
+
+This application can be used to share blog posts with people online as well as to communicate with other developers or users through comments on the blog posts.
+
+# GitHub URL
+
+https://github.com/jonahscottlewis/tech-blog-14
+
+# Contact
+
+[E-mail](mailto:jonahslewis96@gmail.com)
+
 
 # 14 Model-View-Controller (MVC): Tech Blog
 
