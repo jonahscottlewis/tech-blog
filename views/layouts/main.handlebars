@@ -11,17 +11,15 @@
   <header>
     <nav>
          {{#if logged_in}}
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#" id="logout">Logout</a></li>
-        </ul>
+     <nav class="nav nav-pills flex-column flex-sm-row">
+  <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">Home</a>
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">Dashboard</a>
+  <a class="flex-sm-fill text-sm-center nav-link disabled">Logout</a>
+</nav>
         {{else}}
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Login</a></li>
-        </ul>
+  <a class="flex-sm-fill text-sm-center nav-link disabled" href="/login">Login</a>
+</nav>
         {{/if}}
         <h1>Tech Blog</h1>
     </nav>

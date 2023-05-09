@@ -33,7 +33,7 @@ https://github.com/jonahscottlewis/tech-blog-14
 
 # Contact
 
-[E-mail](mailto:jonahslewis96@gmail.com)
+[jonahslewis96@gmail.com](mailto:jonahslewis96@gmail.com)
 
 
 # 14 Model-View-Controller (MVC): Tech Blog
