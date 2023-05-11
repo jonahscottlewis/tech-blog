@@ -1,36 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <title>Tech Blog</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Tech Blog</title>
 </head>
+
 <body>
+  {{#if logged_in}}
+  <nav class="nav nav-pills flex-column flex-sm-row">
+    <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">Home</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">Dashboard</a>
+    <a class="flex-sm-fill text-sm-center nav-link disabled">Logout</a>
+  </nav>
+
+  {{else}}
   <header>
-    <nav>
-         {{#if logged_in}}
-     <nav class="nav nav-pills flex-column flex-sm-row">
-  <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
-  <a class="flex-sm-fill text-sm-center nav-link" href="#">Home</a>
-  <a class="flex-sm-fill text-sm-center nav-link" href="#">Dashboard</a>
-  <a class="flex-sm-fill text-sm-center nav-link disabled">Logout</a>
-</nav>
-        {{else}}
-  <a class="flex-sm-fill text-sm-center nav-link disabled" href="/login">Login</a>
-</nav>
-        {{/if}}
-        <h1>Tech Blog</h1>
-    </nav>
-  </header>
-  <main class="container container-fluid mt-5">
+   <nav class="nav nav-pills flex-column flex-sm-row">
+    <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">Home</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">Dashboard</a>
+    <a class="flex-sm-fill text-sm-center nav-link disabled" href="/login">Login</a>
+  </nav>
+  <div>
+   {{/if}}
+    <div>
+      <h1>Tech Blog</h1>
+
+
+      {{!-- take out later --}}
+      {{!-- <h2>Login</h2>
+
+      <form class="form login-form">
+        <div class="form-group">
+          <label for="email-login">email:</label>
+          <input class="form-input" type="text" id="email-login" />
+        </div>
+        <div class="form-group">
+          <label for="password-login">password:</label>
+          <input class="form-input" type="password" id="password-login" />
+        </div>
+      </form>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+      <div>
+        <h4>Don't have an account?</h4>
+        <a class="btn btn-primary" href="/signup">Sign Up</a>
+
+      </div>
+    </div> --}}
+
+    {{!-- <scrip src="/js/login.js"></scrip> --}}
+    {{!-- <a class="btn btn-primary" href="/login">Login</a> --}}
+
+    
+   
+
+    <main class="container container-fluid mt-5">
+
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-
-    {{#if logged_in}}
-  <script src="/public/js/logout.js"></script>
-  {{/if}}
 </body>
+
 </html>
