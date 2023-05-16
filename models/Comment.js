@@ -11,7 +11,7 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true,
           },
-        content: {
+        comment_text: {
             type: DataTypes.STRING,
             allowNull: false, 
             validate: {
@@ -24,8 +24,16 @@ Comment.init(
             references: {
                 model: 'user',
                 key: 'id'
-            },
+            }
         },
+        post_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'post',
+                key: 'id'
+            }
+        }
     },{
         sequelize,  
         timestamps: true,
