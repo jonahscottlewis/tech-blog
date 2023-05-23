@@ -27,4 +27,4 @@ Comment.belongsTo(Blog, {
   forignKey: 'blog_id'
 });
 
-module.exports = { User, Blog };
+module.exports = { User, Blog, Comment };
